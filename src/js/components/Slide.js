@@ -22,13 +22,13 @@ export default class Slide extends Component {
     }
 
     return (
-      <Section full={true} pad='large' onFocus={this._onSlideFocus}>
+      <Section full={true} pad='large'>
         {anchorNode}
-        <Box align='start' {...this.props}
+        <Box ref='slide' align='start' {...this.props}
           className={`${this.props.className || ''} slide flex`}
           pad={{vertical: 'large'}}>
           {titleNode}
-          <Box pad={{vertical: 'large'}} full='horizontal'>
+          <Box full='horizontal'>
             {children}
           </Box>
         </Box>

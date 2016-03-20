@@ -20,15 +20,9 @@ const Motivation = () => {
         </Paragraph>
         <Heading strong={true} tag='h2'>Common Issues</Heading>
         <Bullets>
-          <Bullet>
-            Different interaction patterns, such as search and navigation
-          </Bullet>
-          <Bullet>
-            Duplication of work
-          </Bullet>
-          <Bullet>
-            Hard to interact with other projects
-          </Bullet>
+          <Bullet item='Different interaction patterns, such as search and navigation' />
+          <Bullet item='Duplication of work' />
+          <Bullet item='Hard to interact with other projects' />
         </Bullets>
       </Tile>
     </Tiles>

@@ -13,7 +13,11 @@ export default class Slides extends Component {
   _onFocusChange (index) {
     const currentSlide = this.props.children[index];
     setDocumentTitle(currentSlide.props.title);
-    window.location.hash = currentSlide.props.id;
+    if (history.pushState) {
+      history.pushState(null, null, `#${currentSlide.props.id}`);
+    } else {
+      location.hash = `#${currentSlide.props.id}`;
+    }
   }
 
   render () {
