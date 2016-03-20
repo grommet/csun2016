@@ -7,7 +7,7 @@ import Presenter from '../Presenter';
 
 const Home = () => {
   return (
-    <div>
+    <Box>
       <Box>
         <Heading strong={true} className="heading--huge">Grommet</Heading>
       </Box>
@@ -26,7 +26,7 @@ const Home = () => {
           name='Sam Ogami' detail='HP Inc.'
           twitterTag='sogami' githubTag='samogami' />
       </Box>
-    </div>
+    </Box>
   );
 };
 
