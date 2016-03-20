@@ -1,0 +1,27 @@
+//for hpe theme, use the following import instead
+//@import '~grommet/scss/hpe/index';
+
+$paragraph-large-font-size: 36px;
+
+@import '~grommet/scss/vanilla/index';
+
+h1.heading--huge {
+  font-size: 70px;
+}
+
+img.gravatar {
+  border-radius: 50%;
+}
+
+.slide {
+  flex-shrink: 0;
+}
+
+.bullets {
+  @include inuit-font-size(36px);
+  text-align: left;
+
+  &--small {
+    @include inuit-font-size(24px, 36px);
+  }
+}
