@@ -4,6 +4,8 @@
   "main": "src/js/index.js",
   "dependencies": {
     "classnames": "^2.2.3",
+    "compression": "^1.6.1",
+    "express": "^4.13.4",
     "grommet": "https://github.com/grommet/grommet/tarball/stable",
     "gulp": "^3.9.0"
   },

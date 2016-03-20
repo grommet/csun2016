@@ -12,14 +12,14 @@ const Motivation = () => {
   return (
     <Tiles fill={true}>
       <Tile justify='center'>
-        <img src='/img/frustrated.gif' />
+        <img src='/img/frustrated.gif' title='Frustrated Animation' />
       </Tile>
       <Tile>
         <Paragraph size='large'>
           Enable teams to efficiently develop great apps with a familiar experience.
         </Paragraph>
         <Heading strong={true} tag='h2'>Common Issues</Heading>
-        <Bullets small={true}>
+        <Bullets>
           <Bullet>
             Different interaction patterns, such as search and navigation
           </Bullet>
