@@ -43,12 +43,14 @@ img.gravatar {
     }
   }
 
-  &__slideIn {
-    &-enter {
-      transform: translateX(100%);
+  @include media-query(lap-and-up) {
+    &__slideIn {
+      &-enter {
+        transform: translateX(100%);
 
-      &-active {
-        animation: slide-in 0.3s forwards;
+        &-active {
+          animation: slide-in 0.3s forwards;
+        }
       }
     }
   }
