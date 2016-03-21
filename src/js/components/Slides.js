@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { Motion, spring } from 'react-motion';
 
 import Box from 'grommet/components/Box';
 import Button from 'grommet/components/Button';
@@ -98,17 +98,16 @@ export default class Slides extends Component {
       );
     }
 
-    let item = (
-      <div key={`active_item_${this.state.activeIndex}`}>
-        {this.props.children[this.state.activeIndex]}
-      </div>
-    );
     return (
       <Box direction='row' className={CLASS_ROOT}>
-        <ReactCSSTransitionGroup transitionName={`${CLASS_ROOT}__slideIn`}
-          transitionEnterTimeout={300} transitionLeaveTimeout={300}>
-          {item}
-        </ReactCSSTransitionGroup>
+        <Motion key={this.state.activeIndex}
+          defaultStyle={{x: 50}} style={{x: spring(0)}}>
+          {({x}) =>
+            <div style={{ transform: `translateX(${x}%)` }}>
+              {this.props.children[this.state.activeIndex]}
+            </div>
+          }
+        </Motion>
         {controls}
       </Box>
     );

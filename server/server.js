@@ -5,7 +5,7 @@ var path = require('path');
 
 var server = express();
 
-var PORT = process.env.PORT || 9000;
+var PORT = process.env.PORT || 9050;
 
 var app = express();
 app.use(compression());
@@ -15,4 +15,4 @@ app.use('/', express.static(path.join(__dirname, '/../dist')));
 var server = http.createServer(app);
 server.listen(PORT);
 
-console.log('Server started, listening at: http://localhost:9000...');
+console.log(`Server started, listening at: http://localhost:${PORT}...`);
