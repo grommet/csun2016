@@ -17,7 +17,7 @@ const Presenter = (props) => {
       <Heading tag="h2">
         {name}
       </Heading>
-      <Heading tag="h3">
+      <Heading tag="h3" align='center'>
         {detail}
       </Heading>
       <Box direction='row' responsive={false}>

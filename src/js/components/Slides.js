@@ -1,32 +1,116 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-import Article from 'grommet/components/Article';
+import Box from 'grommet/components/Box';
+import Button from 'grommet/components/Button';
+import KeyboardAccelerators from 'grommet/utils/KeyboardAccelerators';
+import NextIcon from 'grommet/components/icons/base/LinkNext';
+import PreviousIcon from 'grommet/components/icons/base/LinkPrevious';
 
 import { setDocumentTitle } from '../utils/presentation';
+
+const CLASS_ROOT = 'slides';
+
+const CONTROL_CLASS_PREFIX = `${CLASS_ROOT}__control ${CLASS_ROOT}__control`;
 
 export default class Slides extends Component {
   constructor () {
     super();
-    this._onFocusChange = this._onFocusChange.bind(this);
+
+    this._loadCurrentSlide = this._loadCurrentSlide.bind(this);
+    this._onPrevious = this._onPrevious.bind(this);
+    this._onNext = this._onNext.bind(this);
+
+    this.state = {
+      activeIndex: 0
+    };
   }
 
-  _onFocusChange (index) {
-    const currentSlide = this.props.children[index];
+  componentDidMount () {
+    this._keys = {left: this._onPrevious, right: this._onNext};
+    KeyboardAccelerators.startListeningToKeyboard(this, this._keys);
+
+    this._loadCurrentSlide();
+
+    window.addEventListener('hashchange', this._loadCurrentSlide);
+  }
+
+  componentDidUpdate () {
+    const currentSlide = this.props.children[this.state.activeIndex];
     setDocumentTitle(currentSlide.props.title);
     if (history.pushState) {
       history.pushState(null, null, `#${currentSlide.props.id}`);
     } else {
       location.hash = `#${currentSlide.props.id}`;
     }
+    document.activeElement.blur();
+  }
+
+  componentWillUnmount () {
+    KeyboardAccelerators.stopListeningToKeyboard(this, this._keys);
+    window.removeEventListener('hashchange', this._loadCurrentSlide);
+  }
+
+  _loadCurrentSlide () {
+    if (location.hash) {
+      const children = React.Children.toArray(this.props.children);
+
+      children.some((child, index) => {
+        if (`#${child.props.id}` === location.hash) {
+          this.setState({activeIndex: index});
+          return true;
+        }
+      }, this);
+    }
+  }
+
+  _onNext () {
+    const { children } = this.props;
+    const nextIndex = this.state.activeIndex + 1;
+    const activeIndex = (nextIndex > children.length - 1) ?
+        children.length - 1 : nextIndex;
+
+    this.setState({activeIndex});
+  }
+
+  _onPrevious () {
+    const previousIndex = this.state.activeIndex - 1;
+    const activeIndex = (previousIndex < 0) ? 0 : previousIndex;
+
+    this.setState({activeIndex});
   }
 
   render () {
+    const childCount = this.props.children.length;
+    let controls = [];
+    if (this.state.activeIndex > 0) {
+      controls.push(
+        <Button key="previous" plain={true} a11yTitle='Previous Slide'
+          className={`${CONTROL_CLASS_PREFIX}-left`}
+          onClick={this._onPrevious} icon={<PreviousIcon size="large" />} />
+      );
+    }
+    if (this.state.activeIndex < (childCount - 1)) {
+      controls.push(
+        <Button key="next" plain={true} a11yTitle='Next Slide'
+          className={`${CONTROL_CLASS_PREFIX}-right`}
+          onClick={this._onNext} icon={<NextIcon size="large" />} />
+      );
+    }
+
+    let item = (
+      <div key={`active_item_${this.state.activeIndex}`}>
+        {this.props.children[this.state.activeIndex]}
+      </div>
+    );
     return (
-      <Article direction='row' scrollStep={true} controls={true}
-        onFocusChange={this._onFocusChange}
-        a11yTitle={{next: 'Next Slide', previous: 'Previous Slide'}}>
-        {this.props.children}
-      </Article>
+      <Box direction='row' className={CLASS_ROOT}>
+        <ReactCSSTransitionGroup transitionName={`${CLASS_ROOT}__slideIn`}
+          transitionEnterTimeout={300} transitionLeaveTimeout={300}>
+          {item}
+        </ReactCSSTransitionGroup>
+        {controls}
+      </Box>
     );
   }
 };

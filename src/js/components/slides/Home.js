@@ -7,12 +7,12 @@ import Presenter from '../Presenter';
 
 const Home = () => {
   return (
-    <Box>
+    <Box align='center'>
       <Box>
         <Heading strong={true} className="heading--huge">Grommet</Heading>
       </Box>
       <Box pad={{vertical: 'small'}}>
-        <Heading>
+        <Heading align='center'>
           An accessible UX framework for enterprise apps
         </Heading>
       </Box>
