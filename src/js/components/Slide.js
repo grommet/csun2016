@@ -6,7 +6,7 @@ import Section from 'grommet/components/Section';
 
 export default class Slide extends Component {
   render () {
-    const { children, id, title } = this.props;
+    const { children, title } = this.props;
     let titleNode;
     if (title) {
       titleNode = (
@@ -14,19 +14,9 @@ export default class Slide extends Component {
       );
     }
 
-    let anchorNode;
-    if (id) {
-      anchorNode = (
-        <a id={id} tabIndex="-1" aria-hidden="true" />
-      );
-    }
-
     return (
       <Section full={true} pad='large'>
-        {anchorNode}
-        <Box ref='slide' align='start' {...this.props}
-          className={`${this.props.className || ''} slide flex`}
-          pad={{vertical: 'large'}}>
+        <Box align='start' {...this.props} pad={{vertical: 'large'}}>
           {titleNode}
           <Box full='horizontal'>
             {children}
