@@ -9,6 +9,14 @@ import Section from 'grommet/components/Section';
 import SkipLinkAnchor from 'grommet/components/SkipLinkAnchor';
 import Footer from 'grommet/components/Footer';
 
+Anchor.displayName = 'Anchor';
+Box.displayName = 'Box';
+Menu.displayName = 'Menu';
+Label.displayName = 'Label';
+Section.displayName = 'Section';
+Heading.displayName = 'Heading';
+Footer.displayName = 'Footer';
+
 import LinkIcon from 'grommet/components/icons/base/Link';
 
 import Demo from '../../Demo';

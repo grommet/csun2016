@@ -3,8 +3,12 @@ import React from 'react';
 import Anchor from 'grommet/components/Anchor';
 import Box from 'grommet/components/Box';
 import Button from 'grommet/components/Button';
-import User from 'grommet/components/icons/base/User';
 
+Anchor.displayName = 'Anchor';
+Box.displayName = 'Box';
+Button.displayName = 'Button';
+
+import UserIcon from 'grommet/components/icons/base/User';
 import LinkIcon from 'grommet/components/icons/base/Link';
 
 import Demo from '../../Demo';
@@ -13,11 +17,11 @@ const code = (
   <Box pad={{vertical: 'medium'}} align='center'>
     <Box pad='small'>
       <Anchor href='http://www.grommet.io/docs/develop/icon'
-        large='_blank' icon={<User size='large' />} />
+        large='_blank' icon={<UserIcon size='large' />} />
     </Box>
 
     <Box pad='small'>
-      <Button plain={true} icon={<User size='large' />} onClick={() => {}} />
+      <Button plain={true} icon={<UserIcon size='large' />} onClick={() => {}} />
     </Box>
   </Box>
 );
