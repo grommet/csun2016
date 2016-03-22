@@ -16,6 +16,8 @@ import Demo1 from './slides/demos/Demo1';
 import Demo2 from './slides/demos/Demo2';
 import Demo3 from './slides/demos/Demo3';
 import Demo4 from './slides/demos/Demo4';
+import Demo5 from './slides/demos/Demo5';
+import Demo6 from './slides/demos/Demo6';
 
 const CSUNSlides = () => {
   return (
@@ -52,6 +54,12 @@ const CSUNSlides = () => {
       </Slide>
       <Slide title='Demo #4 <Anchor /> and <Button />' id='demo-4'>
         <Demo4 />
+      </Slide>
+      <Slide title='Demo #5 <... a11yTitle a11yTitleId />' id='demo-5'>
+        <Demo5 />
+      </Slide>
+      <Slide title='Demo #6 <Layer /> <Form />' id='demo-6'>
+        <Demo6 />
       </Slide>
       <Slide title='Call to Action' id='call-to-action'>
         <CallToAction />
