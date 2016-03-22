@@ -5,6 +5,7 @@ import Heading from 'grommet/components/Heading';
 import Label from 'grommet/components/Label';
 import Menu from 'grommet/components/Menu';
 import Section from 'grommet/components/Section';
+import SkipLinkAnchor from 'grommet/components/SkipLinkAnchor';
 import Footer from 'grommet/components/Footer';
 
 import Demo from '../../Demo';
@@ -20,11 +21,20 @@ const code = (
       </Menu>
     </Box>
     <Section primary={true}>
-      <Box pad={{ vertical: 'small' }} separator="top">
-        <Label uppercase={true}>Breaking News</Label>
+      <Box>
+        <Box pad={{ vertical: 'small' }} separator="top">
+          <Label uppercase={true}>Breaking News</Label>
+        </Box>
+        <Box direction='row' justify='between'>
+          <Heading tag='h2'><a href='#'>Jennision is hosting a
+            party in downtown San Diego, tonight!</a></Heading>
+          <Box colorIndex="light-2" pad='large'>
+            <SkipLinkAnchor label='Right Panel' />
+            <Heading tag='h3'><a href='#'>Sign-up</a></Heading>
+            <Heading tag='h3'><a href='#'>Cancel RSVP</a></Heading>
+          </Box>
+        </Box>
       </Box>
-      <Heading tag='h2'><a href='#'>Jennision is hosting a
-        party in downtown San Diego, tonight!</a></Heading>
     </Section>
     <Footer primary={true} colorIndex='neutral-4'
       align='center' justify='center' pad='large'>
@@ -33,12 +43,12 @@ const code = (
   </Box>
 );
 
-const explanation = 'Added automatically and provides a layer to skip to known components (e.g footer).';
+const explanation = 'A component to allow for custom Skip Links.';
 
 const Demo1 = () => {
   return (
     <Demo explanation={explanation} code={code}
-      codepen='http://codepen.io/alansouzati/pen/dMvLwX?editors=0010' />
+      codepen='http://codepen.io/alansouzati/pen/QNpRWJ?editors=0010' />
   );
 };
 

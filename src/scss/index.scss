@@ -3,6 +3,7 @@
 
 $paragraph-large-font-size: 36px;
 
+@import 'highlight-js.github';
 @import '~grommet/scss/vanilla/index';
 
 h1.heading--huge {
@@ -47,6 +48,10 @@ img.gravatar {
       transform: translateY(-50%);
       right: 0;
     }
+  }
+
+  p {
+    max-width: 100%;
   }
 }
 
