@@ -51,7 +51,7 @@ export default class Demo extends Component {
 
   render () {
 
-    const { anchor, code, explanation } = this.props;
+    const { anchor, code, explanation, source } = this.props;
 
     let demoNode = code;
     let codeLabel = 'Show';
@@ -60,7 +60,7 @@ export default class Demo extends Component {
       demoNode = (
         <Box pad={{horizontal: 'medium', vertical: 'medium'}}>
           <pre><code>
-            {jsxToString(code)}
+            {jsxToString(source || code)}
           </code></pre>
         </Box>
       );
@@ -90,7 +90,8 @@ export default class Demo extends Component {
 };
 
 Demo.propTypes = {
+  anchor: PropTypes.node,
   explanation: PropTypes.string.isRequired,
   code: PropTypes.node.isRequired,
-  link: PropTypes.node
+  source: PropTypes.node
 };
