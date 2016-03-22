@@ -102,7 +102,7 @@ export default class Slides extends Component {
     return (
       <Box direction='row' className={CLASS_ROOT}>
         <Motion key={this.state.activeIndex}
-          defaultStyle={{x: 20}} style={{x: spring(0)}}>
+          defaultStyle={{x: 10}} style={{x: spring(0)}}>
           {({x}) =>
             <div style={{
               WebkitTransform: `translate3d(${x}%, 0, 0)`,
