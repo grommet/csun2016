@@ -104,8 +104,8 @@ export default class Slides extends Component {
           defaultStyle={{x: 100}} style={{x: spring(0)}}>
           {({x}) =>
             <div style={{
-              WebkitTransform: `translateX(${x}%)`,
-              transform: `translateX(${x}%)`
+              WebkitTransform: `translate3d(${x}%, 0, 0)`,
+              transform: `translate3d(${x}%, 0, 0)`
             }}>
               {this.props.children[this.state.activeIndex]}
             </div>

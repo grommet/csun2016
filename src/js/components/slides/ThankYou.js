@@ -11,7 +11,7 @@ const ThankYou = () => {
         <GrommetLogo size='large' />
       </Box>
       <Heading align='center' tag='h2'>
-        Wait... before your leave let's open-source something!
+        Wait... before you leave let's open-source something!
       </Heading>
     </Box>
   );
