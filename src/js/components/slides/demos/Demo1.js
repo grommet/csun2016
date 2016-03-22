@@ -1,11 +1,14 @@
 import React from 'react';
 
+import Anchor from 'grommet/components/Anchor';
 import Box from 'grommet/components/Box';
 import Heading from 'grommet/components/Heading';
 import Label from 'grommet/components/Label';
 import Menu from 'grommet/components/Menu';
 import Section from 'grommet/components/Section';
 import Footer from 'grommet/components/Footer';
+
+import LinkIcon from 'grommet/components/icons/base/Link';
 
 import Demo from '../../Demo';
 
@@ -36,9 +39,14 @@ const code = (
 const explanation = 'Added automatically and provides a layer to skip to known components (e.g footer).';
 
 const Demo1 = () => {
+  const codepenAnchor = (
+    <Anchor href='http://codepen.io/alansouzati/pen/dMvLwX?editors=0010'
+      target='_blank' label='CodePen' icon={<LinkIcon />}
+      a11yTitle='See in CodePen' />
+  );
   return (
     <Demo explanation={explanation} code={code}
-      codepen='http://codepen.io/alansouzati/pen/dMvLwX?editors=0010' />
+      anchor={codepenAnchor} />
   );
 };
 

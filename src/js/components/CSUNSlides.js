@@ -14,6 +14,8 @@ import CallToAction from './slides/CallToAction';
 import ThankYou from './slides/ThankYou';
 import Demo1 from './slides/demos/Demo1';
 import Demo2 from './slides/demos/Demo2';
+import Demo3 from './slides/demos/Demo3';
+import Demo4 from './slides/demos/Demo4';
 
 const CSUNSlides = () => {
   return (
@@ -44,6 +46,12 @@ const CSUNSlides = () => {
       </Slide>
       <Slide title='Demo #2 <SkipLinkAnchor />' id='demo-2'>
         <Demo2 />
+      </Slide>
+      <Slide title='Demo #3 <Icon />' id='demo-3'>
+        <Demo3 />
+      </Slide>
+      <Slide title='Demo #4 <Anchor /> and <Button />' id='demo-4'>
+        <Demo4 />
       </Slide>
       <Slide title='Call to Action' id='call-to-action'>
         <CallToAction />

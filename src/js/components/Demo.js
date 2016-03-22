@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import jsxToString from 'jsx-to-string';
 
-import Anchor from 'grommet/components/Anchor';
 import Box from 'grommet/components/Box';
 import Button from 'grommet/components/Button';
 import Paragraph from 'grommet/components/Paragraph';
 
 import CodeIcon from 'grommet/components/icons/base/Code';
-import LinkIcon from 'grommet/components/icons/base/Link';
 
 //hjjs configuration
 import hljs from 'highlight.js/lib/highlight';
@@ -28,7 +26,7 @@ function _highlightCode () {
   }
 }
 
-export default class Demo1 extends Component {
+export default class Demo extends Component {
 
   constructor () {
     super();
@@ -53,7 +51,7 @@ export default class Demo1 extends Component {
 
   render () {
 
-    const { explanation, code, codepen } = this.props;
+    const { anchor, code, explanation } = this.props;
 
     let demoNode = code;
     let codeLabel = 'Show';
@@ -68,14 +66,9 @@ export default class Demo1 extends Component {
       );
     }
 
-    let codepenAnchor;
     let justify = 'end';
-    if (codepen) {
+    if (anchor) {
       justify = 'between';
-      codepenAnchor = (
-        <Anchor href={codepen} target='_blank' label='CodePen'
-          icon={<LinkIcon />} a11yTitle='See in CodePen' />
-      );
     }
     return (
       <Box full='horizontal'>
@@ -84,7 +77,7 @@ export default class Demo1 extends Component {
         </Paragraph>
 
         <Box direction='row' responsive={false} justify={justify} align='center'>
-          {codepenAnchor}
+          {anchor}
           <Button label={`${codeLabel} Code`} plain={true}
             icon={<CodeIcon />} onClick={this._toggleView}
             a11yTitle={`${codeLabel} Code`} />
@@ -94,4 +87,10 @@ export default class Demo1 extends Component {
       </Box>
     );
   }
+};
+
+Demo.propTypes = {
+  explanation: PropTypes.string.isRequired,
+  code: PropTypes.node.isRequired,
+  link: PropTypes.node
 };

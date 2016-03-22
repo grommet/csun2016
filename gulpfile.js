@@ -22,6 +22,7 @@ var opts = {
   mainJs: 'src/js/index.js',
   mainScss: 'src/scss/index.scss',
   devServerPort: 9000,
+  devServerHost: '16.108.134.240',
   webpack: {
     resolve: {
       root: [

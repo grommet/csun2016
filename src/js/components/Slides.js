@@ -104,7 +104,7 @@ export default class Slides extends Component {
         <Motion key={this.state.activeIndex}
           defaultStyle={{x: 10}} style={{x: spring(0)}}>
           {({x}) =>
-            <div style={{
+            <div className={`${CLASS_ROOT}__animation-container`} style={{
               WebkitTransform: `translate3d(${x}%, 0, 0)`,
               transform: `translate3d(${x}%, 0, 0)`
             }}>

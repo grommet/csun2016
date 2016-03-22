@@ -53,6 +53,11 @@ img.gravatar {
   p {
     max-width: 100%;
   }
+
+  &__animation-container {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }
 
 iframe.sample-container {
