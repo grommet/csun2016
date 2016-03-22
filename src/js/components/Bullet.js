@@ -4,14 +4,17 @@ const Bullet = (props) => {
   const { children, item } = props;
 
   return (
-    <li>{item}
+    <li className='bullet'>{item}
       {children}
     </li>
   );
 };
 
 Bullet.propTypes = {
-  item: PropTypes.string.isRequired
+  item: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node
+  ]).isRequired
 };
 
 export default Bullet;

@@ -14,11 +14,21 @@ img.gravatar {
 }
 
 .bullets {
+
   @include inuit-font-size(36px);
   text-align: left;
 
   &--small {
     @include inuit-font-size(24px, 36px);
+  }
+
+  .bullet {
+    min-width: 100%;
+
+    > p {
+      @include inuit-font-size(30px, 36px);
+      padding-left: $inuit-base-spacing-unit;
+    }
   }
 }
 
@@ -42,4 +52,10 @@ img.gravatar {
       right: 0;
     }
   }
+}
+
+iframe.sample-container {
+  height: calc(100vh - #{$header-height * 2.7});
+  width: 100%;
+  border: none;
 }

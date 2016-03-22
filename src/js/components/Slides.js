@@ -103,7 +103,10 @@ export default class Slides extends Component {
         <Motion key={this.state.activeIndex}
           defaultStyle={{x: 100}} style={{x: spring(0)}}>
           {({x}) =>
-            <div style={{ transform: `translateX(${x}%)` }}>
+            <div style={{
+              WebkitTransform: `translateX(${x}%)`,
+              transform: `translateX(${x}%)`
+            }}>
               {this.props.children[this.state.activeIndex]}
             </div>
           }
