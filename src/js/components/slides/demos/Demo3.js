@@ -2,8 +2,11 @@ import React from 'react';
 
 import Anchor from 'grommet/components/Anchor';
 import Box from 'grommet/components/Box';
-import User from 'grommet/components/icons/base/User';
 
+Anchor.displayName = 'Anchor';
+Box.displayName = 'Box';
+
+import UserIcon from 'grommet/components/icons/base/User';
 import LinkIcon from 'grommet/components/icons/base/Link';
 
 import Demo from '../../Demo';
@@ -11,9 +14,9 @@ import Demo from '../../Demo';
 const code = (
   <Box pad={{vertical: 'medium'}} align='center'>
     <Box direction='row'>
-      <User />
-      <User size='large' />
-      <User size='huge' colorIndex="brand" />
+      <UserIcon />
+      <UserIcon size='large' />
+      <UserIcon size='huge' colorIndex="brand" />
     </Box>
   </Box>
 );
