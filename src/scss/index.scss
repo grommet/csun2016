@@ -27,14 +27,11 @@ img.gravatar {
 
     > p {
       @include inuit-font-size(30px, 36px);
-      padding-left: $inuit-base-spacing-unit;
     }
   }
 }
 
 .slides {
-  position: relative;
-
   > .slides__control {
     position: fixed;
     z-index: 10;

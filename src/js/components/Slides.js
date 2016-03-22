@@ -64,7 +64,8 @@ export default class Slides extends Component {
     }
   }
 
-  _onNext () {
+  _onNext (event) {
+    event.preventDefault();
     const { children } = this.props;
     const nextIndex = this.state.activeIndex + 1;
     const activeIndex = (nextIndex > children.length - 1) ?
@@ -101,7 +102,7 @@ export default class Slides extends Component {
     return (
       <Box direction='row' className={CLASS_ROOT}>
         <Motion key={this.state.activeIndex}
-          defaultStyle={{x: 100}} style={{x: spring(0)}}>
+          defaultStyle={{x: 20}} style={{x: spring(0)}}>
           {({x}) =>
             <div style={{
               WebkitTransform: `translate3d(${x}%, 0, 0)`,
