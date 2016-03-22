@@ -8,6 +8,8 @@
     "express": "^4.13.4",
     "grommet": "https://github.com/grommet/grommet/tarball/stable",
     "gulp": "^3.9.0",
+    "highlight.js": "^9.2.0",
+    "jsx-to-string": "^0.2.10",
     "react-motion": "^0.4.2"
   },
   "engines": {

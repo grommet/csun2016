@@ -13,6 +13,7 @@ import AccessibilityCore from './slides/AccessibilityCore';
 import CallToAction from './slides/CallToAction';
 import ThankYou from './slides/ThankYou';
 import Demo1 from './slides/demos/Demo1';
+import Demo2 from './slides/demos/Demo2';
 
 const CSUNSlides = () => {
   return (
@@ -38,8 +39,11 @@ const CSUNSlides = () => {
       <Slide title='Accessibility is core' id='a11y-core'>
         <AccessibilityCore />
       </Slide>
-      <Slide title='Demo #1' id='demo-1'>
+      <Slide title='Demo #1 <SkipLinks />' id='demo-1'>
         <Demo1 />
+      </Slide>
+      <Slide title='Demo #2 <SkipLinkAnchor />' id='demo-2'>
+        <Demo2 />
       </Slide>
       <Slide title='Call to Action' id='call-to-action'>
         <CallToAction />
