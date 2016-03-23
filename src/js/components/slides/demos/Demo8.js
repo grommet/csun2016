@@ -35,7 +35,7 @@ const code = (
     </Box>
 
     <Box separator='top' pad='small' align='center'>
-      <Heading strong={true} tag='h3'>Drinking Speed (Jennision)</Heading>
+      <Heading strong={true} tag='h3'>Drinking Speed (Jennison)</Heading>
       <Meter type='arc' value={6} units='BPM'
         a11yTitleId='drinking-speed' a11yDescId='drinking-speed-desc'
         min={{'value': 0, 'label': '0 BPH'}}

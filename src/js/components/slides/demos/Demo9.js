@@ -16,10 +16,10 @@ import Demo from '../../Demo';
 
 const code = (
   <Box pad={{vertical: 'medium'}}>
-    <Heading strong={true} tag='h3'>Jennision vs Sam (BPM) </Heading>
+    <Heading strong={true} tag='h3'>Jennison vs Sam (BPM) </Heading>
     <Chart series={[
       {
-        'label': 'Jennision',
+        'label': 'Jennison',
         'values': [[7, 3], [6, 5], [5, 5], [4, 8], [3, 3], [2, 8], [1, 6]],
         'colorIndex': 'graph-1'
       },
