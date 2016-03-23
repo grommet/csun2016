@@ -16,7 +16,7 @@ import Demo from '../../Demo';
 
 const code = (
   <Box pad={{vertical: 'medium'}}>
-    <Heading strong={true} tag='h3'>Jennison vs Sam (BPM) </Heading>
+    <Heading strong={true} tag='h3'>Jennison vs Sam (BPH) </Heading>
     <Chart series={[
       {
         'label': 'Jennison',
@@ -39,7 +39,7 @@ const code = (
         {'label': 'Sun', 'value': 2},
         {'label': 'Sat', 'value': 1}
       ]
-    }} units='BPM' thresholds={[
+    }} units='BPH' thresholds={[
       {'label': 'OK', 'value': 0, 'colorIndex': 'ok'},
       {'label': 'Warning', 'value': 5, 'colorIndex': 'warning'},
       {'label': 'Error', 'value': 7, 'colorIndex': 'error'}
