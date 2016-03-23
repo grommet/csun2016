@@ -1,9 +1,12 @@
 import React, { Component, PropTypes } from 'react';
+import ReactDOM from 'react-dom';
 import jsxToString from 'jsx-to-string';
 
 import Box from 'grommet/components/Box';
 import Button from 'grommet/components/Button';
 import Paragraph from 'grommet/components/Paragraph';
+import KeyboardAccelerators from 'grommet/utils/KeyboardAccelerators';
+import DOMUtils from 'grommet/utils/DOM';
 
 import CodeIcon from 'grommet/components/icons/base/Code';
 
@@ -32,6 +35,8 @@ export default class Demo extends Component {
     super();
 
     this._toggleView = this._toggleView.bind(this);
+    this._preventPropagation = this._preventPropagation.bind(this);
+
     this.state = {
       showCode: false
     };
@@ -39,14 +44,32 @@ export default class Demo extends Component {
 
   componentDidMount () {
     _highlightCode();
+
+    this._keys = {
+      left: this._preventPropagation,
+      right: this._preventPropagation
+    };
+    KeyboardAccelerators.startListeningToKeyboard(this, this._keys);
   }
 
   componentDidUpdate () {
     _highlightCode();
   }
 
+  componentWillUnmount () {
+    KeyboardAccelerators.stopListeningToKeyboard(this, this._keys);
+  }
+
   _toggleView () {
     this.setState({showCode: !this.state.showCode});
+  }
+
+  _preventPropagation () {
+    const parent = ReactDOM.findDOMNode(this.refs.container);
+    console.log(parent, document.activeElement);
+    if (DOMUtils.isDescendant(parent, document.activeElement)) {
+      return true;
+    }
   }
 
   render () {
@@ -76,14 +99,16 @@ export default class Demo extends Component {
           {explanation}
         </Paragraph>
 
-        <Box direction='row' responsive={false} justify={justify} align='center'>
-          {anchor}
-          <Button label={`${codeLabel} Code`} plain={true}
-            icon={<CodeIcon />} onClick={this._toggleView}
-            a11yTitle={`${codeLabel} Code`} />
-        </Box>
+        <Box ref='container'>
+          <Box direction='row' responsive={false} justify={justify} align='center'>
+            {anchor}
+            <Button label={`${codeLabel} Code`} plain={true}
+              icon={<CodeIcon />} onClick={this._toggleView}
+              a11yTitle={`${codeLabel} Code`} />
+          </Box>
 
-        {demoNode}
+          {demoNode}
+        </Box>
       </Box>
     );
   }

@@ -32,7 +32,7 @@ import LinkIcon from 'grommet/components/icons/base/Link';
 
 import Demo from '../../Demo';
 
-const explanation = 'Layer and Form is a powerful combination that are very common for Single Page Apps.';
+const explanation = 'Layer and Form is a powerful combination that is very common for Single Page Apps.';
 
 class LayerDemo extends Component {
   constructor () {
@@ -53,7 +53,8 @@ class LayerDemo extends Component {
     let layer;
     if (this.state.showLayer) {
       layer = (
-        <Layer closer={true} onClose={this._toggleLayer} align='right'>
+        <Layer closer={true} onClose={this._toggleLayer} align='right'
+          a11yTitle='Add User'>
           <Box pad={{horizontal: 'small', vertical: 'large'}}>
             <Form>
               <Heading strong={true} tag='h2'>
@@ -111,7 +112,8 @@ const Demo6 = () => {
   );
 
   const source = (
-    <Layer closer={true} onClose={() => {}} align='right'>
+    <Layer closer={true} onClose={() => {}} align='right'
+      a11yTitle='Add User'>
       <Box pad={{horizontal: 'small', vertical: 'large'}}>
         <Form>
           <Heading strong={true} tag='h2'>

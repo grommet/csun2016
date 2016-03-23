@@ -30,14 +30,14 @@ const explanation = 'Anchors and Buttons can receive an icon property to provide
 
 const Demo4 = () => {
 
-  const iconsDocAnchor = (
+  const anchorDoc = (
     <Anchor href='http://www.grommet.io/docs/develop/icon'
       target='_blank' label='All Icons' icon={<LinkIcon />}
       a11yTitle='See All Icons' />
   );
 
   return (
-    <Demo explanation={explanation} code={code} anchor={iconsDocAnchor} />
+    <Demo explanation={explanation} code={code} anchor={anchorDoc} />
   );
 };
 
