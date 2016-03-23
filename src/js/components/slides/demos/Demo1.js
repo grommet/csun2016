@@ -34,7 +34,7 @@ const code = (
       <Box pad={{ vertical: 'small' }} separator="top">
         <Label uppercase={true}>Breaking News</Label>
       </Box>
-      <Heading tag='h2'><a href='#'>Jennision is hosting a
+      <Heading tag='h2'><a href='#'>Jennison is hosting a
         party in downtown San Diego, tonight!</a></Heading>
     </Section>
     <Footer primary={true} colorIndex='neutral-4'

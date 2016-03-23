@@ -65,7 +65,7 @@ class LayerDemo extends Component {
                   <FormField label="Name" htmlFor='nameInput'>
                     <input type='text' name='nameInput' id='nameInput' />
                   </FormField>
-                  <FormField label="Presence" help="Are you going to Jennision party?">
+                  <FormField label="Presence" help="Are you going to Jennison party?">
                     <RadioButton id="presence-1" label="Yes" name="choice"/>
                     <RadioButton id="presence-2" label="Sure" name="choice"/>
                   </FormField>
@@ -124,7 +124,7 @@ const Demo6 = () => {
               <FormField label="Name" htmlFor='nameInput'>
                 <input type='text' name='nameInput' id='nameInput' />
               </FormField>
-              <FormField label="Presence" help="Are you going to Jennision party?">
+              <FormField label="Presence" help="Are you going to Jennison party?">
                 <RadioButton id="presence-1" label="Yes" name="choice"/>
                 <RadioButton id="presence-2" label="Sure" name="choice"/>
               </FormField>

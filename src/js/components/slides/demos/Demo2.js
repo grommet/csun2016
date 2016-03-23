@@ -37,7 +37,7 @@ const code = (
           <Label uppercase={true}>Breaking News</Label>
         </Box>
         <Box direction='row' justify='between'>
-          <Heading tag='h2'><a href='#'>Jennision is hosting a
+          <Heading tag='h2'><a href='#'>Jennison is hosting a
             party in downtown San Diego, tonight!</a></Heading>
           <Box colorIndex="light-2" pad='large'>
             <SkipLinkAnchor label='Right Panel' />
