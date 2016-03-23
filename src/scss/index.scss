@@ -10,8 +10,12 @@ h1.heading--huge {
   font-size: 70px;
 }
 
-img.gravatar {
-  border-radius: 50%;
+img {
+  max-width: 400px;
+
+  &.gravatar {
+    border-radius: 50%;
+  }
 }
 
 .bullets {

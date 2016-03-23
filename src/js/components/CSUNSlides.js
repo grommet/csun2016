@@ -4,6 +4,7 @@ import Slides from './Slides';
 import Slide from './Slide';
 
 import Home from './slides/Home';
+import Definition from './slides/Definition';
 import Overview from './slides/Overview';
 import Motivation from './slides/Motivation';
 import Objectives from './slides/Objectives';
@@ -30,6 +31,9 @@ const CSUNSlides = () => {
       </Slide>
       <Slide title='Overview' id='overview'>
         <Overview />
+      </Slide>
+      <Slide title='What is Grommet?' id='definition'>
+        <Definition />
       </Slide>
       <Slide title='Motivation' id='motivation'>
         <Motivation />
