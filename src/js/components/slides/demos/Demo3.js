@@ -25,14 +25,14 @@ const explanation = 'Iconography has about 300 hundred icons, all svg. Must have
 
 const Demo3 = () => {
 
-  const iconsDocAnchor = (
+  const anchorDoc = (
     <Anchor href='http://www.grommet.io/docs/develop/icon'
       target='_blank' label='All Icons' icon={<LinkIcon />}
       a11yTitle='See All Icons' />
   );
 
   return (
-    <Demo explanation={explanation} code={code} anchor={iconsDocAnchor} />
+    <Demo explanation={explanation} code={code} anchor={anchorDoc} />
   );
 };
 

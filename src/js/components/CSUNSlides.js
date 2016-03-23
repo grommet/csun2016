@@ -18,6 +18,9 @@ import Demo3 from './slides/demos/Demo3';
 import Demo4 from './slides/demos/Demo4';
 import Demo5 from './slides/demos/Demo5';
 import Demo6 from './slides/demos/Demo6';
+import Demo7 from './slides/demos/Demo7';
+import Demo8 from './slides/demos/Demo8';
+import Demo9 from './slides/demos/Demo9';
 
 const CSUNSlides = () => {
   return (
@@ -55,11 +58,20 @@ const CSUNSlides = () => {
       <Slide title='Demo #4 <Anchor /> and <Button />' id='demo-4'>
         <Demo4 />
       </Slide>
-      <Slide title='Demo #5 <... a11yTitle a11yTitleId />' id='demo-5'>
+      <Slide title='Demo #5 <... a11yTitle />' id='demo-5'>
         <Demo5 />
       </Slide>
       <Slide title='Demo #6 <Layer /> <Form />' id='demo-6'>
         <Demo6 />
+      </Slide>
+      <Slide title='Demo #7 <Distribution />' id='demo-7'>
+        <Demo7 />
+      </Slide>
+      <Slide title='Demo #8 <Meter />' id='demo-8'>
+        <Demo8 />
+      </Slide>
+      <Slide title='Demo #9 <Chart />' id='demo-9'>
+        <Demo9 />
       </Slide>
       <Slide title='Call to Action' id='call-to-action'>
         <CallToAction />
