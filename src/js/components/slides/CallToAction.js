@@ -1,8 +1,9 @@
 import React from 'react';
 
 import Anchor from 'grommet/components/Anchor';
-import Bullets from '../Bullets';
-import Bullet from '../Bullet';
+
+import Bullets from 'grommet-presentation/components/Bullets';
+import Bullet from 'grommet-presentation/components/Bullet';
 
 const CallToAction = () => {
 

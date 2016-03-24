@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Slides from './Slides';
-import Slide from './Slide';
+import Slides from 'grommet-presentation/components/Slides';
+import Slide from 'grommet-presentation/components/Slide';
 
 import Home from './slides/Home';
 import Definition from './slides/Definition';

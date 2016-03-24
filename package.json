@@ -7,6 +7,7 @@
     "compression": "^1.6.1",
     "express": "^4.13.4",
     "grommet": "https://github.com/grommet/grommet/tarball/stable",
+    "grommet-presentation": "https://github.com/grommet/grommet-presentation/tarball/stable",
     "gulp": "^3.9.0",
     "highlight.js": "^9.2.0",
     "jsx-to-string": "^0.2.10",

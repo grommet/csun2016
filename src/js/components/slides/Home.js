@@ -1,15 +1,15 @@
 import React from 'react';
 
 import Box from 'grommet/components/Box';
-import Heading from 'grommet/components/Heading';
 
-import Presenter from '../Presenter';
+import Heading from 'grommet-presentation/components/Heading';
+import Presenter from 'grommet-presentation/components/Presenter';
 
 const Home = () => {
   return (
     <Box align='center'>
       <Box>
-        <Heading strong={true} className="heading--huge">Grommet</Heading>
+        <Heading strong={true} huge={true}>Grommet</Heading>
       </Box>
       <Box pad={{vertical: 'small'}}>
         <Heading align='center'>

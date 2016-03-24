@@ -2,8 +2,8 @@ import React from 'react';
 
 import Paragraph from 'grommet/components/Paragraph';
 
-import Bullets from '../Bullets';
-import Bullet from '../Bullet';
+import Bullets from 'grommet-presentation/components/Bullets';
+import Bullet from 'grommet-presentation/components/Bullet';
 
 const AccessibilityCore = () => {
   return (

@@ -5,8 +5,8 @@ import Paragraph from 'grommet/components/Paragraph';
 import Tiles from 'grommet/components/Tiles';
 import Tile from 'grommet/components/Tile';
 
-import Bullets from '../Bullets';
-import Bullet from '../Bullet';
+import Bullets from 'grommet-presentation/components/Bullets';
+import Bullet from 'grommet-presentation/components/Bullet';
 
 const Motivation = () => {
   return (

@@ -19,7 +19,7 @@ Footer.displayName = 'Footer';
 
 import LinkIcon from 'grommet/components/icons/base/Link';
 
-import Demo from '../../Demo';
+import Demo from 'grommet-presentation/components/Demo';
 
 const code = (
   <Box pad={{vertical: 'medium'}}>
