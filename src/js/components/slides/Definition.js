@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Box from 'grommet/components/Box';
 import Paragraph from 'grommet/components/Paragraph';
 
 import Bullets from 'grommet-presentation/components/Bullets';
@@ -23,8 +24,9 @@ const Definition = () => {
         </Bullets>
       </Bullet>
       <Bullet item='Created thinking on Devs not CSS-savvy'>
-        <img src='/img/css.gif'
-          title='Manipulating CSS Animation' />
+        <Box align='center' pad={{vertical: 'small'}}>
+          <img src='/img/css.gif' alt='Manipulating CSS Animation' />
+        </Box>
       </Bullet>
     </Bullets>
   );
