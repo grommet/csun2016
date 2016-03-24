@@ -21,7 +21,7 @@ const code = (
   </Box>
 );
 
-const explanation = 'Iconography has about 300 hundred icons, all svg. Must have an action to be focusible.';
+const explanation = 'Iconography has about 300 icons, all svg. Must have an action to be focusible.';
 
 const Demo3 = () => {
 
