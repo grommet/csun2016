@@ -13,7 +13,7 @@ Button.displayName = 'Button';
 import CloseIcon from 'grommet/components/icons/base/Close';
 import LinkIcon from 'grommet/components/icons/base/Link';
 
-import Demo from '../../Demo';
+import Demo from 'grommet-presentation/components/Demo';
 
 const code = (
   <List>

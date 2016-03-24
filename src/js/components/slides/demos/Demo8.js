@@ -12,7 +12,7 @@ Box.displayName = 'Box';
 Meter.displayName = 'Meter';
 Heading.displayName = 'Heading';
 
-import Demo from '../../Demo';
+import Demo from 'grommet-presentation/components/Demo';
 
 const series = [
   {'label': 'Memory', 'value': 40, labelValue: '40%', 'colorIndex': 'warning'},

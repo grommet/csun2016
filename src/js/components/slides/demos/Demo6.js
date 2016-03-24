@@ -30,7 +30,7 @@ import CloseIcon from 'grommet/components/icons/base/Close';
 import AddIcon from 'grommet/components/icons/base/Add';
 import LinkIcon from 'grommet/components/icons/base/Link';
 
-import Demo from '../../Demo';
+import Demo from 'grommet-presentation/components/Demo';
 
 const explanation = 'Layer and Form is a powerful combination that is very common for Single Page Apps.';
 

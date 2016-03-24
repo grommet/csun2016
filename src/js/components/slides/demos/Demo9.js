@@ -12,7 +12,7 @@ Box.displayName = 'Box';
 Chart.displayName = 'Chart';
 Heading.displayName = 'Heading';
 
-import Demo from '../../Demo';
+import Demo from 'grommet-presentation/components/Demo';
 
 const code = (
   <Box pad={{vertical: 'medium'}}>
