@@ -16,6 +16,7 @@ Label.displayName = 'Label';
 Section.displayName = 'Section';
 Heading.displayName = 'Heading';
 Footer.displayName = 'Footer';
+SkipLinkAnchor.displayName = 'SkipLinkAnchor';
 
 import LinkIcon from 'grommet/components/icons/base/Link';
 
