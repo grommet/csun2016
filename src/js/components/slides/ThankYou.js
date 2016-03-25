@@ -21,12 +21,14 @@ const ThankYou = () => {
         <Box>
           <Anchor href='https://github.com/grommet/grommet-presentation'
             target="_blank" label='grommet-presentation'
-            icon={<GithubIcon a11yTitle='grommet-presentation github' />} />
+            a11yTitle='grommet-presentation github'
+            icon={<GithubIcon  />} />
         </Box>
         <Box>
           <Anchor href='http://codepen.io/alansouzati/pen/xVdeKa?editors=0010'
             target="_blank" label='codepen'
-            icon={<LinkIcon a11yTitle='grommet-presentation codepen' />} />
+            a11yTitle='grommet-presentation codepen'
+            icon={<LinkIcon />} />
         </Box>
       </Box>
     </Box>
