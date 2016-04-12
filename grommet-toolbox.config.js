@@ -3,6 +3,7 @@ import path from 'path';
 export default {
   copyAssets: [
     'src/index.html',
+    'CNAME',
     {
       asset: 'node_modules/grommet/img/*icon*.*',
       dist: 'dist/img/'
