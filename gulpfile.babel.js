@@ -25,7 +25,7 @@ gulp.task('release:createTmp', (done) => {
   });
 });
 
-gulp.task('release:gh-pages', ['dist', 'release:createTmp'], (done) => {
+gulp.task('release:gh-pages', ['release:createTmp'], (done) => {
   if (process.env.CI) {
     git.clone(
       'https://' + process.env.GH_TOKEN + '@github.com/grommet/grommet-csun.git',
