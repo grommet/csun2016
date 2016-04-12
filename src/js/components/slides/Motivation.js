@@ -12,7 +12,7 @@ const Motivation = () => {
   return (
     <Tiles fill={true}>
       <Tile justify='center'>
-        <img src='/img/frustrated.gif' alt='Frustrated Animation' />
+        <img src='img/frustrated.gif' alt='Frustrated Animation' />
       </Tile>
       <Tile>
         <Paragraph size='large'>

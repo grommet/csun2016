@@ -25,7 +25,7 @@ const Definition = () => {
       </Bullet>
       <Bullet item='Created thinking on Devs not CSS-savvy'>
         <Box align='center' pad={{vertical: 'small'}}>
-          <img src='/img/css.gif' alt='Manipulating CSS Animation' />
+          <img src='img/css.gif' alt='Manipulating CSS Animation' />
         </Box>
       </Bullet>
     </Bullets>
