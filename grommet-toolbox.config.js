@@ -28,7 +28,9 @@ export default {
   },
   alias: {
     'grommet/scss': path.resolve(__dirname, '../grommet/src/scss'),
-    'grommet': path.resolve(__dirname, '../grommet/src/js')
+    'grommet-presentation/scss': path.resolve(__dirname, '../grommet-presentation/src/scss'),
+    'grommet': path.resolve(__dirname, '../grommet/src/js'),
+    'grommet-presentation': path.resolve(__dirname, '../grommet-presentation/src/js')
   },
   devPreprocess: ['set-webpack-alias'],
   scsslint: true

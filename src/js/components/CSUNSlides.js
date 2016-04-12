@@ -26,7 +26,7 @@ import Demo9 from './slides/demos/Demo9';
 const CSUNSlides = () => {
   return (
     <Slides>
-      <Slide align='center' justify='center' id='home'>
+      <Slide align='center' justify='center' id='home' full={true}>
         <Home />
       </Slide>
       <Slide title='Overview' id='overview'>

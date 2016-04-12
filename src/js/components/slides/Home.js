@@ -7,7 +7,7 @@ import Presenter from 'grommet-presentation/components/Presenter';
 
 const Home = () => {
   return (
-    <Box align='center'>
+    <Box justify='center' align='center'>
       <Box>
         <Heading strong={true} huge={true}>Grommet</Heading>
       </Box>
