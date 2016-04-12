@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "del": "^2.2.0",
+    "grommet-toolbox": "^0.1.14",
     "gulp-git": "^1.7.0",
     "mkdirp": "^0.5.1"
   }
